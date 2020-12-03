@@ -16,6 +16,7 @@ This site demonstrates <a href="https://github.com/philhawksworth/netlify-plugin
 <ul>
   <li><a href="https://www.netlify.com/blog/index.xml?{{ site.utm }}">https://www.netlify.com/blog/index.xml</a></li>
   <li><a href="https://hawksworx.com/feed.json">https://hawksworx.com/feed.json</a></li>
+
 </ul>
 <p>
   The data feeds and the duration of their caching can be configured in <a href="{{ pkg.repository.url }}/blob/master/netlify.toml">the netlify.toml</a> config file. Once requested, the data is available for the site generator to use as below.
@@ -31,6 +32,13 @@ This site demonstrates <a href="https://github.com/philhawksworth/netlify-plugin
 <h2>Hawksworx</h2>
 <ul class="listing">
 {%- for item in hawksworx.entries.slice(0,4) -%}
+  <li><a href="{{ item.link }}">{{ item.title }}</a></li>
+{%- endfor -%}
+</ul>
+
+<h2>Avi</h2>
+<ul class="listing">
+{%- for item in avi_test.entries.slice(0,4) -%}
   <li><a href="{{ item.link }}">{{ item.title }}</a></li>
 {%- endfor -%}
 </ul>
