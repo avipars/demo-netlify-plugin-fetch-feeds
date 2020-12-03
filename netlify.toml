@@ -19,3 +19,7 @@
       name = "netlify"
       url = "https://www.netlify.com/blog/index.xml"
       ttl = 86400   # Cache for 24 hours
+    [[plugins.inputs.feeds]]
+      name = "avi_test"
+      url = "https://camelcamelcamel.com/top_drops/feed?bn=&d=10&i=1&s=relative&t=recent&"
+      ttl = 1200   # Cache for 24 hours
